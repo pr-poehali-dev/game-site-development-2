@@ -30,44 +30,44 @@ const Index = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const characters = [
+  const bosses = [
     {
-      name: "Кибер-Воин",
-      role: "Атакующий",
-      image: "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/6180a203-5f00-48a2-aaa0-474d9f507356.jpg",
-      description: "Мастер ближнего боя с усиленной броней"
+      name: "Страж Тени",
+      role: "Босс Первого Уровня",
+      image: "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/2c9acf5c-9f93-40da-a748-bb9bf9068d28.jpg",
+      description: "Загадочная фигура, охраняющая вход в лес"
     },
     {
-      name: "Нейро-Хакер",
-      role: "Поддержка",
-      image: "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/727c1eb5-46a0-491d-bb1d-319d2a978679.jpg",
-      description: "Управляет системами противника"
+      name: "Хранитель Равновесия",
+      role: "Финальный Босс",
+      image: "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/2c9acf5c-9f93-40da-a748-bb9bf9068d28.jpg",
+      description: "Откроет Ваське истинное предназначение"
     },
     {
-      name: "Плазма-Снайпер",
-      role: "Дальний бой",
-      image: "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/6180a203-5f00-48a2-aaa0-474d9f507356.jpg",
-      description: "Точные выстрелы на дальних дистанциях"
+      name: "Призрак Прошлого",
+      role: "Секретный Босс",
+      image: "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/2c9acf5c-9f93-40da-a748-bb9bf9068d28.jpg",
+      description: "Отражение внутренних страхов котёнка"
     }
   ];
 
   const screenshots = [
-    "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/2d0b6cdb-11d0-421c-bce8-12cd90b8be20.jpg",
-    "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/6180a203-5f00-48a2-aaa0-474d9f507356.jpg",
-    "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/727c1eb5-46a0-491d-bb1d-319d2a978679.jpg"
+    "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/7873d475-0db0-427e-a0f5-abfc4ff5baeb.jpg",
+    "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/2c47cbf4-bc84-4c5f-856c-73a2d60e0c1d.jpg",
+    "https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/2c9acf5c-9f93-40da-a748-bb9bf9068d28.jpg"
   ];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <h1 className="text-2xl font-bold text-glow">NEON STRIKE</h1>
+            <h1 className="text-2xl font-bold text-primary">ЛЕС РАВНОВЕСИЯ</h1>
             <div className="hidden md:flex gap-6">
               {[
                 { id: "home", label: "Главная" },
                 { id: "gameplay", label: "Геймплей" },
-                { id: "characters", label: "Персонажи" },
+                { id: "characters", label: "Боссы" },
                 { id: "media", label: "Медиа" },
                 { id: "requirements", label: "Требования" }
               ].map((item) => (
@@ -82,7 +82,7 @@ const Index = () => {
                 </button>
               ))}
             </div>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground box-glow">
+            <Button className="bg-primary hover:bg-primary/80 text-primary-foreground">
               <Icon name="Download" size={16} className="mr-2" />
               Скачать
             </Button>
@@ -93,23 +93,23 @@ const Index = () => {
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/2d0b6cdb-11d0-421c-bce8-12cd90b8be20.jpg"
+            src="https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/7873d475-0db0-427e-a0f5-abfc4ff5baeb.jpg"
             alt="Background"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background"></div>
         </div>
 
         <div className="container mx-auto px-4 z-10 text-center">
           <div className="animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-black mb-6 text-glow animate-float">
-              NEON STRIKE
+              ЛЕС РАВНОВЕСИЯ
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Окунитесь в мир киберпанка будущего. Выбирайте персонажей, развивайте навыки и сражайтесь за контроль над городом.
+              История маленького котёнка Васьки, который ищет своё предназначение в тёмном, атмосферном мире, полном загадок и испытаний.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground box-glow text-lg px-8">
+              <Button size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground text-lg px-8">
                 <Icon name="Download" size={20} className="mr-2" />
                 Скачать игру
               </Button>
@@ -122,11 +122,11 @@ const Index = () => {
 
           <div className="grid grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
             {[
-              { icon: "Users", label: "Онлайн PvP", value: "5v5" },
-              { icon: "Zap", label: "Режимов", value: "8+" },
-              { icon: "Trophy", label: "Персонажей", value: "20+" }
+              { icon: "Ghost", label: "Жанр", value: "Хоррор" },
+              { icon: "Moon", label: "Атмосфера", value: "Тёмная" },
+              { icon: "Skull", label: "Боссов", value: "6+" }
             ].map((stat, i) => (
-              <Card key={i} className="p-6 bg-card/50 backdrop-blur border-primary/20 hover:border-primary transition-all hover:box-glow">
+              <Card key={i} className="p-6 bg-card/50 backdrop-blur border-primary/20 hover:border-primary transition-all">
                 <Icon name={stat.icon} size={32} className="mx-auto mb-2 text-primary" />
                 <div className="text-3xl font-bold text-primary">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
@@ -139,40 +139,40 @@ const Index = () => {
       <section id="gameplay" className="py-24 relative">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-bold text-center mb-4 text-glow">Геймплей</h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">Динамичные бои в киберпанк-мире</p>
+          <p className="text-center text-muted-foreground mb-16 text-lg">Исследуйте тёмный мир в стиле Little Nightmares</p>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/6180a203-5f00-48a2-aaa0-474d9f507356.jpg"
+                src="https://cdn.poehali.dev/projects/2b850eb6-46de-4fe6-a73c-a998b638582e/files/2c47cbf4-bc84-4c5f-856c-73a2d60e0c1d.jpg"
                 alt="Gameplay"
-                className="rounded-lg border border-primary/20 box-glow"
+                className="rounded-lg border border-primary/20"
               />
             </div>
             <div className="space-y-6">
               {[
                 {
-                  icon: "Sword",
-                  title: "Тактические бои",
-                  desc: "Используйте способности персонажей и работайте в команде"
+                  icon: "Footprints",
+                  title: "Платформер-хоррор",
+                  desc: "Путешествуйте через мрачные локации, решайте головоломки"
                 },
                 {
-                  icon: "Sparkles",
-                  title: "Уникальные способности",
-                  desc: "Каждый герой обладает набором мощных умений"
+                  icon: "Brain",
+                  title: "Философская история",
+                  desc: "Узнайте о предназначении Васьки через испытания"
                 },
                 {
-                  icon: "Map",
-                  title: "Множество карт",
-                  desc: "Сражайтесь на улицах неонового города и в его окрестностях"
+                  icon: "Eye",
+                  title: "Атмосферный мир",
+                  desc: "Погрузитесь в депрессивную, серую эстетику"
                 },
                 {
-                  icon: "Award",
-                  title: "Система прогрессии",
-                  desc: "Открывайте новых персонажей и улучшения"
+                  icon: "Swords",
+                  title: "Битвы с боссами",
+                  desc: "Противостойте страшным существам леса"
                 }
               ].map((feature, i) => (
-                <Card key={i} className="p-6 bg-card/50 backdrop-blur border-primary/20 hover:border-primary transition-all hover:box-glow">
+                <Card key={i} className="p-6 bg-card/50 backdrop-blur border-primary/20 hover:border-primary transition-all">
                   <div className="flex gap-4">
                     <div className="flex-shrink-0">
                       <Icon name={feature.icon} size={24} className="text-primary" />
@@ -191,29 +191,29 @@ const Index = () => {
 
       <section id="characters" className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-4 text-glow">Персонажи</h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">Выберите своего бойца</p>
+          <h2 className="text-5xl font-bold text-center mb-4 text-glow">Боссы</h2>
+          <p className="text-center text-muted-foreground mb-16 text-lg">Встретьте существ Леса Равновесия</p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {characters.map((char, i) => (
+            {bosses.map((boss, i) => (
               <Card
                 key={i}
-                className="overflow-hidden bg-card/50 backdrop-blur border-primary/20 hover:border-primary transition-all hover:box-glow hover:scale-105 duration-300 group cursor-pointer"
+                className="overflow-hidden bg-card/50 backdrop-blur border-primary/20 hover:border-primary transition-all hover:scale-105 duration-300 group cursor-pointer"
               >
                 <div className="relative overflow-hidden">
                   <img
-                    src={char.image}
-                    alt={char.name}
+                    src={boss.image}
+                    alt={boss.name}
                     className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <div className="text-sm text-secondary font-semibold mb-1">{char.role}</div>
-                    <h3 className="text-2xl font-bold">{char.name}</h3>
+                    <div className="text-sm text-accent font-semibold mb-1">{boss.role}</div>
+                    <h3 className="text-2xl font-bold">{boss.name}</h3>
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-muted-foreground">{char.description}</p>
+                  <p className="text-muted-foreground">{boss.description}</p>
                 </div>
               </Card>
             ))}
@@ -224,13 +224,13 @@ const Index = () => {
       <section id="media" className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-bold text-center mb-4 text-glow">Скриншоты</h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">Посмотрите на игру в действии</p>
+          <p className="text-center text-muted-foreground mb-16 text-lg">Посмотрите на атмосферу игры</p>
 
           <div className="grid md:grid-cols-3 gap-6">
             {screenshots.map((img, i) => (
               <div
                 key={i}
-                className="relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all hover:box-glow cursor-pointer group"
+                className="relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all cursor-pointer group"
               >
                 <img
                   src={img}
@@ -273,9 +273,9 @@ const Index = () => {
               </div>
             </Card>
 
-            <Card className="p-8 bg-card/50 backdrop-blur border-secondary/30 box-glow">
+            <Card className="p-8 bg-card/50 backdrop-blur border-accent/30">
               <div className="flex items-center gap-3 mb-6">
-                <Icon name="Zap" size={32} className="text-secondary" />
+                <Icon name="Zap" size={32} className="text-accent" />
                 <h3 className="text-2xl font-bold">Рекомендуемые</h3>
               </div>
               <div className="space-y-4">
@@ -298,15 +298,15 @@ const Index = () => {
       </section>
 
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 blur-3xl"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-5xl font-bold mb-6 text-glow">Готовы начать?</h2>
+          <h2 className="text-5xl font-bold mb-6 text-glow">Готовы узнать свою судьбу?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Скачайте игру бесплатно и присоединяйтесь к миллионам игроков
+            Скачайте игру и помогите Ваське найти ответы на его вопросы
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground box-glow text-xl px-12 py-6 h-auto">
+          <Button size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground text-xl px-12 py-6 h-auto">
             <Icon name="Download" size={24} className="mr-3" />
-            Скачать NEON STRIKE
+            Скачать ЛЕС РАВНОВЕСИЯ
           </Button>
           <div className="mt-6 text-sm text-muted-foreground">
             Доступно на Windows, macOS и Linux
@@ -314,42 +314,43 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="border-t border-primary/20 py-12 bg-muted/30">
+      <footer className="border-t border-primary/10 py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-4 text-glow">NEON STRIKE</h3>
+              <h3 className="text-xl font-bold mb-4 text-primary">ЛЕС РАВНОВЕСИЯ</h3>
               <p className="text-muted-foreground text-sm">
-                Футуристический шутер нового поколения
+                Философская история маленького котёнка в тёмном мире
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Игра</h4>
+              <h4 className="font-semibold mb-4">Навигация</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="hover:text-primary cursor-pointer transition-colors">Главная</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">Геймплей</li>
                 <li className="hover:text-primary cursor-pointer transition-colors">Скачать</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Новости</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Обновления</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Ресурсы</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="hover:text-primary cursor-pointer transition-colors">Discord</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">VK</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">Telegram</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">YouTube</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Поддержка</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="hover:text-primary cursor-pointer transition-colors">FAQ</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Форум</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Связаться</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">Политика конфиденциальности</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">Пользовательское соглашение</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">Обратная связь</li>
               </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Социальные сети</h4>
-              <div className="flex gap-4">
-                <Icon name="Twitter" size={20} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-                <Icon name="Youtube" size={20} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-                <Icon name="Twitch" size={20} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              </div>
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            © 2024 NEON STRIKE. Все права защищены.
+            © 2024 ЛЕС РАВНОВЕСИЯ. Все права защищены.
           </div>
         </div>
       </footer>
